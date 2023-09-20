@@ -1,0 +1,96 @@
+/*Font Importers*/
+
+
+
+/*Root Vars*/
+:root{
+    --ls-red:#b33f3f;
+    --ls-green:#3fb362;
+    --ls-red-hv:#c64646;
+    --ls-green-hv:#45ca6d;
+    --page-bg:#3d4353;
+    --page-bg-dark:#313646;
+    --page-bg-light:#484f64;
+    --page-bg-color:#3c4c7a;
+    --top-bar:#262626;
+
+}
+
+/*Body Main*/
+body,html,#app{
+    margin:0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background:var(--page-bg-light);
+    font-size: 1rem;
+    scroll-behavior: smooth;
+}
+#app{
+    width:100%;
+    max-width:1500px;
+    margin:0 auto;
+    background:var(--page-bg);
+    display: flex;
+    flex-direction: column;
+    
+    @media screen and (min-width:900px) {
+        gap:1rem;
+        max-width: unset;
+    }
+
+}
+
+button{
+    border:0;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding:1rem;
+    align-items: center;
+    font-size: 1rem;
+    gap:.5rem;
+    cursor: pointer;
+
+
+    span{
+        text-transform: uppercase;
+    }
+    i{
+        font-size: 1.2rem;
+    }
+
+    &[back]{
+        background:var(--ls-red);
+        color:white;
+        @media screen and (min-width:900px) {
+            margin:0 1rem;
+            border-radius: .5rem;
+        }
+
+        &:hover{
+            background:var(--ls-red-hv);
+        }
+    
+    }
+    &[refresh]{
+        background:var(--ls-green);
+        color:white;
+        @media screen and (min-width:900px) {
+            margin:0 1rem;
+            border-radius: .5rem;
+        }
+        &:hover{
+            background:var(--ls-green-hv);
+        }
+    
+    }
+}
+
+.itembox{
+    background:#000000b3;
+    border-radius: .5rem;
+    padding:1rem;
+    color:White;
+    width:min-content;
+    white-space:nowrap;
+    text-align: center;
+}
